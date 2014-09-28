@@ -10,7 +10,7 @@ ada_array = ada.split("&")
     hash = {}
     ada_array.each do |fact|
       new_array = fact.split("=")
-      hash[new_array[0]] = new_array[1]
+      hash[new_array[0].to_sym] = new_array[1]
     end
   return hash
   end
